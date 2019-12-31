@@ -7,12 +7,13 @@ import (
 
 func main() {
   fifo := queue.Fifo{}
+  fifo.Alloc(3)
   fifo.Enqueue("foo")
   fifo.Enqueue("bar")
   fifo.Enqueue("baz")
 
-  fmt.Println(fifo.Dequeue())
-  fmt.Println(fifo.Dequeue())
-  fmt.Println(fifo.Dequeue())
-  fmt.Println(fifo.Dequeue())
+  fmt.Printf("%q\n", fifo.Dequeue())
+  fmt.Printf("%q\n", fifo.Dequeue())
+  fmt.Printf("%q\n", fifo.Dequeue())
+  fmt.Printf("%q\n", fifo.Dequeue())
 }
